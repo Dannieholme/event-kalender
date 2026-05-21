@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sysser.info rediger</title>
+</head>
+<body>
+    <h1>Rediger event</h1>
+
+    <form method="POST">
+
+        <input
+            name="Titel"
+            value="{{ event['title'] }}"
+            required
+        >
+
+        <input
+            name="Lokation"
+            value="{{ event['location'] }}"
+            required
+        >
+
+        <input
+            type="datetime-local"
+            name="Dato"
+            value="{{ event['datetime'] }}"
+            required
+        >
+
+        <button>Gem ændringer</button>
+
+    </form>
+</body>
+</html>

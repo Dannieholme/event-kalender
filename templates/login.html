@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sysser.info LOGIN</title>
+</head>
+<body>
+    <h1>Login</h1>
+
+    <form method="POST">
+        <input type="text" name="username">
+
+        <input type="password" name="password">
+
+        <button>Log ind</button>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+    </form>
+</body>
+</html>

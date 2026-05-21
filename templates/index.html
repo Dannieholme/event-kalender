@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sysser.info</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>De Unge på 40 + 40</h1>
+    </div>
+
+    {% for event in events %}
+        <div class="event-box">
+          <strong>{{ event["title"] }}</strong><br>
+          {{ event["location"] }}<br>
+          {{ event["formatted_datetime"] }}
+          <div class="infodiv">
+              <a class="info" href="/event/{{ event['id'] }}">ℹ️ Info</a>
+          </div>
+        </div>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>

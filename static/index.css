@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    background-color: #E1E5F2;
+}
+.navbar {
+    display: flex;
+    width: 100%;
+    background-color: #022B3A;
+    color: #BFDBF7;
+}
+.navbar h1 {
+    margin: 20px auto;
+}
+.event-box {
+    display: flex;
+    width: 90%;
+    max-width: 700px;
+    flex-direction: column;
+    align-items: center;
+
+
+    background-color: #1F7A8C;
+    padding: 20px;
+    color: white;
+    margin: 20px auto;
+}
+
+
+
+.infodiv {
+    margin-top: 10px;
+}
+
+.infodiv a {
+    color: #BFDBF7;
+    text-decoration: None;
+}
+
+.infodiv a:hover {
+    color: white;
+}

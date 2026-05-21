@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sysser.info</title>
+    <link rel="stylesheet" href="/static/admin.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Sysser Info</h1>
+        <div class="navright">
+            <a href="/admin/opret">Opret</a>
+            <a href="/logout">Log ud</a>
+        </div>
+    </div>
+    <p class="fritext">Velkommen til adminpanlet, her kan du oprette, fjerne og ændre i arrangementer</p>
+
+    <hr>
+    {% for event in events %}
+        <div class="event-box">
+          <strong>{{ event["title"] }}</strong><br>
+          {{ event["location"] }}<br>
+          {{ event["formatted_datetime"] }}
+            <div class="actions">
+                 <a class="deletes" href="/admin/edit/{{ event['id'] }}" class="edit-btn">
+                    ✏️ Rediger
+                </a>
+
+                <form class="deletes" method="POST" action="/admin/delete/{{event['id']}}"
+                    onsubmit="return confirm('Slet dette event?')">
+                    <button type="submit">🗑 Slet</button>
+                </form>
+                <a class="deletes" href="/event/{{event['id']}}">ℹ️ Info</a>
+            </div>
+        </div>
+        <hr>
+    {% endfor %}
+</body>
+</html>
